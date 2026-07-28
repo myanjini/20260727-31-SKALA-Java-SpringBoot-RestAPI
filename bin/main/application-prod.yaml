@@ -1,0 +1,8 @@
+# 프로파일 활성화 조건 설정
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+server:
+  port: 9001
