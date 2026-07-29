@@ -9,13 +9,6 @@
             "name": "DemoApplication",
             "request": "launch",
             "mainClass": "com.example.demo.DemoApplication",
-            "projectName": "demo-20260727-31-SKALA-Java-SpringBoot-RestAPI"
-        },
-        {
-            "type": "java",
-            "name": "DemoApplication",
-            "request": "launch",
-            "mainClass": "com.example.demo.DemoApplication",
             "projectName": "20260727-31-SKALA-Java-SpringBoot-RestAPI"
         },
         {
@@ -23,13 +16,7 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "DemoApplication",
-            "request": "launch",
-            "mainClass": "com.example.demo.DemoApplication",
-            "projectName": "demo"
         }
+        
     ]
 }

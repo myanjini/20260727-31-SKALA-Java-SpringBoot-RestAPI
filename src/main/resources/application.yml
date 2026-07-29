@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: demo
+
+  datasource:
+    # 메모리 모드(In-Memory) 설정: 애플리케이션 재시작 시 데이터를 초기화
+    url: jdbc:h2:mem:skala-stock
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  h2:
+    console:
+      # H2 콘솔 웹 인터페이스를 활성화
+      enabled: true
+      # 접속 경로 설정 (기본값: /h2-console)
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 가독성을 위해 실행되는 SQL을 콘솔에 포맷팅해 출력
+        format_sql: true
+        show_sql: true
+
+logging:
+  level:
+    "com.example.demo": debug
+
+management:
+  endpoint:
+    health:
+      show-details: always
