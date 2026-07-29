@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -63,4 +64,11 @@ public class HelloController {
         log.info("/hello: POST {}", body.getName());
         return helloService.createMessage(body.getName());
     }
+
+    // 전역 예외 처리 테스트를 위한 메서드 추가
+    @GetMapping("/test-notfound")
+    public String testNotFound() {
+        throw new NoSuchElementException("요청하신 데이터를 찾을 수 없습니다.");
+    }
+    
 }
