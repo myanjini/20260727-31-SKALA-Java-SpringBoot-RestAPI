@@ -26,15 +26,6 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testAnnotationProcessor 'org.projectlombok:lombok'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
-	runtimeOnly 'com.h2database:h2'
-
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3'
 }
 
 tasks.named('test') {
