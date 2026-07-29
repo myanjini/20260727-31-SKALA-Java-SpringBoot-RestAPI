@@ -13,6 +13,9 @@ import com.example.demo.dto.HelloResponse;
 import com.example.demo.service.CourseService;
 import com.example.demo.service.HelloService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class HelloController {
     // 의존 객체
@@ -21,6 +24,12 @@ public class HelloController {
 
     // 생성자를 이용해서 의존 주의
     public HelloController(HelloService helloService, CourseService courseService) {
+        log.trace("HelloController 생성자 호출");
+        log.debug("HelloController 생성자 호출");
+        log.info("HelloController 생성자 호출");
+        log.warn("HelloController 생성자 호출");
+        log.error("HelloController 생성자 호출");
+
         this.helloService = helloService;
         this.courseService = courseService;
     }
@@ -33,6 +42,12 @@ public class HelloController {
 
     @PostMapping("/courses/{name}")
     public CourseResponse getClassInfo(@PathVariable("name") String name, @RequestParam List<String> topics) {
+        log.trace("POST 방식으로 /courses/{name} 엔드포인트 호출");
+        log.debug("POST 방식으로 /courses/{name} 엔드포인트 호출");
+        log.info("POST 방식으로 /courses/{name} 엔드포인트 호출");
+        log.warn("POST 방식으로 /courses/{name} 엔드포인트 호출");
+        log.error("POST 방식으로 /courses/{name} 엔드포인트 호출");
+
         return courseService.createCourse(name, topics);
     }
 }
